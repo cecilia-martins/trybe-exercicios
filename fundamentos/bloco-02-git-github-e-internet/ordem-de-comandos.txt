@@ -1,0 +1,10 @@
+# Adicionar todos os arquivos modificados
+git add .
+
+# Ou você também pode adicionar arquivos específicos
+git add meu_arquivo.txt
+
+# Então você comita a alteração
+# Ao comitar você deve adicionar também uma mensagem que descreve o que aquela alteração faz
+
+git commit -m "Mensagem sobre a alteração feita"
