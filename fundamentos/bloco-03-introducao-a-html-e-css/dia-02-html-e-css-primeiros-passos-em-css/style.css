@@ -1,0 +1,25 @@
+h1 {
+    font: sans-serif;
+    font-size:65px;
+    color: rgb(226, 141, 12);
+}
+body {
+    font-size:16px;
+    background-color: whitesmoke;
+}
+p { font-size: 3em;
+    font-weight: 600;
+    font-style: italic;
+}
+#roxo {
+    background-color: darkviolet;
+}
+#cinza {
+    background-color: dimgray;
+}
+#azul {
+    background-color: cornflowerblue;
+}
+.fundo-tag{
+    background-color: blanchedalmond;
+}
