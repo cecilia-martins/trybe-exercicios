@@ -60,7 +60,13 @@
     <script>
      let aga1 = document.createElement('h1') //criando o h1
      let textoAga1 = document.createTextNode("Exercício 5.2 - JavaScript DOM"); //criando Texto do h1
-      console.log(aga1.appendChild(textoAga1));
+      aga1.appendChild(textoAga1)
+     document.body.appendChild(aga1)
+      ////////////////////////////////////////////////////////
+      let main = document.createElement('main') //criando main
+      main.className = "main-content"; //add classe ao main
+      document.body.appendChild(main) //add main como filho de body :)
+
 
     </script>
   </body>
