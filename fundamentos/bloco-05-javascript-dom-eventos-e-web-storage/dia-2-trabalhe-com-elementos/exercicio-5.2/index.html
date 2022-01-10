@@ -65,8 +65,11 @@
       ////////////////////////////////////////////////////////
       let main = document.createElement('main') //criando main
       main.className = "main-content"; //add classe ao main
-      document.body.appendChild(main) //add main como filho de body :)
-
+      document.body.appendChild(main) //add main como filho de body
+      ////////////////////////////////////////////////////////
+      let secao = document.createElement('section') //criando a section
+      secao.className = "center-content"; //add classe
+      document.body.nextElementSibling.appendChild(secao);
 
     </script>
   </body>
