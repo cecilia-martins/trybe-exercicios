@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <header>
+      <h2 id="page-title">Título</h2>
+      <p id="paragraph" class="paragrafos">Dê uma cor para este parágrafo!</p>
+      <h4 id="subtitle">Subtítulo</h4>
+      <p id="second-paragraph" class="paragrafos">Segundo parágrafo!</p>
+    </header>
+    <script>
+      const paragraph = document.querySelector("#paragraph");
+      paragraph.style.color = "red";
+      //paragrafos recuperados
+      let p1 = document.querySelectorAll('.paragrafos')[0]; //SEMPRE COLOCANDO A POSIÇÃO
+      p1.style.backgroundColor = "purple";
+
+      let p2 = document.querySelectorAll('.paragrafos')[1];
+      p2.style.backgroundColor = "aliceblue";
+
+      //subtitulo
+      let subtitulo = document.getElementsByTagName('h4')[0];
+      subtitulo.style.color = "green";
+
+      //USEI getElementsByTagName e ClassName.. mas depois os substitui por querySelector e SelectorAll
+    </script>
+  </body>
+</html>
