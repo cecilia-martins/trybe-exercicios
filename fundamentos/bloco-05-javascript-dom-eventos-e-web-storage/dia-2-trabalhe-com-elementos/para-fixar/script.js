@@ -75,3 +75,17 @@ console.log(fiDoFiCriado);
 
 //A PARTIR DO FILHO CRIADO... ACESSE O TERCEIRO FILHO?
 console.log(fiDoFiCriado.parentElement.parentElement.nextElementSibling) ///com ajuda + foi. Mas a logica tava certa
+
+//remover todos os filhos do paidopai, menos o pai, onde vc esta e primeirofidofi
+
+//pegando o pai
+let pai = document.getElementById('pai');
+
+for(let i = pai.childNodes.length -1; i += 0; i +=1) {
+  let filhoAtual = pai.childNodes[i];
+  if (filhoAtual.id !== 'elementoOndeVoceEsta') {
+    filhoAtual.remove();
+  }
+}
+let ultimoFi = document.getElementById('segundoEUltimoFilhoDoFilho');
+  ultimoFi.remove();
