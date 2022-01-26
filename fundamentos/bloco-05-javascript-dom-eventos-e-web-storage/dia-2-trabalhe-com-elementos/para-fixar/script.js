@@ -39,3 +39,39 @@ console.log(document.getElementById('elementoOndeVoceEsta').nextElementSibling);
 //ACESSANDO CERTCEIRO FILHO A PARTIR DE PAI
 
 console.log(document.getElementById('pai').lastElementChild.previousElementSibling);
+
+//CRIE UM IRMÃO PARA ONDE VC ESTÁ
+//primeiro pego o elemento em q vou add um elemento filho
+let ondeVcEsta = document.getElementById('elementoOndeVoceEsta').parentElement;
+//crio o elemento que vou add
+let ondeEstaIrmao = document.createElement('p');
+//aqui add o elemento criado ao elemento ondeVcEsta
+ondeVcEsta.appendChild(ondeEstaIrmao);
+//aqui add texto ao elemento criado
+ondeEstaIrmao.innerText = "paragrafo irmão do ONDE VC ESTA"
+//imprime o elemento criado no console
+console.log(ondeEstaIrmao);
+
+//CRIANDO UM FILHO PARA O ONDE VC ESTA
+let ondeCeTa = document.getElementById('elementoOndeVoceEsta');
+
+let ondeTafilho = document.createElement('p');
+
+ondeTafilho.innerText = "add filho pro onde ce ta";
+
+ondeCeTa.appendChild(ondeTafilho);
+
+console.log(ondeTafilho);
+//CRIANDO FILHO PARA O FILHO DO FILHO KKKKKKK Q CONFUSO MDS
+let fiDoFiEl = document.getElementById('primeiroFilhoDoFilho');
+
+let fiDoFiCriado = document.createElement('p');
+
+fiDoFiCriado.innerText = "filho do primeiro filho do filho kkkkkkkkkkkkkk";
+
+fiDoFiEl.appendChild(fiDoFiCriado);
+
+console.log(fiDoFiCriado);
+
+//A PARTIR DO FILHO CRIADO... ACESSE O TERCEIRO FILHO?
+console.log(fiDoFiCriado.parentElement.parentElement.nextElementSibling) ///com ajuda + foi. Mas a logica tava certa
