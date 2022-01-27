@@ -50,7 +50,11 @@ function alteraCor() {
 
   myWebpage.style.color = "red"; //alterou a cor ao passar com o mouse, porem não sai a cor com a saida do mouse...
 }
-myWebpage.addEventListener('mouseover', alteraCor)
+myWebpage.addEventListener('mouseover', alteraCor);
+//VOLTA A COR
+function  voltarCor() {
+  myWebpage.style.color = "unset"; //AGORA SIIMMMMMM <333
+} myWebpage.addEventListener('mouseout', voltarCor);
 
 // Segue abaixo um exemplo do uso de event.target:
 
