@@ -48,7 +48,7 @@ myWebpage.addEventListener('dblclick', top3);
 
 function alteraCor() {
 
-  myWebpage.style.color = "red"; //alterou a cor ao passar com o mouse, porem não sai a cor com a saida do mouse...
+  myWebpage.style.color = "yellowgreen"; //alterou a cor ao passar com o mouse, porem não sai a cor com a saida do mouse...
 }
 myWebpage.addEventListener('mouseover', alteraCor);
 //VOLTA A COR
