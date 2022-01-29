@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<body>
+  <div>
+    <span id ="text"></span>
+  </div>
+  <button id="button_test">click aqui!</button>
+</body>
+<script>
+  let clickCount = 0; //contagem do zero
+  let textToDisplay = document.getElementById("text");//pegando o id da span
+
+  document.getElementById("button_test") //pegando o botão e add um escutador com uma arrow function dentro
+          .addEventListener("click", () => textToDisplay.innerHTML = clickCount += 1);
+          //sempre que o botão receber um clique, o "id do span" vai receber o valor do clique + 1.
+</script>
+</html>
