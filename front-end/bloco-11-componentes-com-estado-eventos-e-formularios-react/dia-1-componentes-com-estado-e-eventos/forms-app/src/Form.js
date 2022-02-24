@@ -5,7 +5,7 @@ class Form extends React.Component{
   constructor() {
     super()
     
-    this.handleTextAreaChange = this.handleTextAreaChange.bind(this)
+    this.handleChange = this.handleChange.bind(this)
 
     this.state = {
       estadoFavorito: '',
@@ -17,8 +17,11 @@ class Form extends React.Component{
     }
   }
  
-  handleTextAreaChange(event) {
-    this.setState({estadoFavorito: event.target.value})
+  handleChange({target }) {
+    const { name, value } = target
+    this.setState({
+      [name]: target.value
+    })
   }
   
   render() {
@@ -29,7 +32,7 @@ class Form extends React.Component{
         <form className="form">
           <label>
             Diga qual é seu Estado favorito! Do Brasil ou do React, você quem sabe!
-            <textarea name="estadoFavorito" onChange={this.handleTextAreaChange}/>
+            <textarea name="estadoFavorito" onChange={this.handleChange}/>
           </label>
           <label>
             Email
