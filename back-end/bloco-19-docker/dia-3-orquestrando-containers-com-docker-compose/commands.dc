@@ -1,0 +1,15 @@
+ docker run -d --name site-trybe -p 4545:80 -v meu/caminho:/usr/local/apache2/htdocs httpd:2.4
+
+ http://localhost:4545/missao_trybe.html
+
+ docker ps
+
+ docker inspect id-do-container
+
+ docker stop id-do-container
+
+ docker rm id-do-container
+
+ docker images
+
+ docker rmi id-da-imagem
