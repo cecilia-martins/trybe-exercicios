@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <header>
+      <h2 id="page-title">Título</h2>
+      <p class="mesmo-para">Dê uma cor para este parágrafo!</p>
+      <h4 class="subtitle">Subtítulo</h4>
+      <p class="mesmo-para">Segundo parágrafo!</p>
+    </header>
+    <!-- Adicione uma classe igual para os dois parágrafos. -->
+    <!-- Recupere os seus parágrafos via código JavaScript , usando a função getElementsByClassName ;
+    Altere algum estilo do primeiro deles.
+    Recupere o subtítulo e altere a cor dele usando a função getElementsByTagName -->
+
+    <script>
+      // const paragraph = document.getElementById("paragraph");
+      // paragraph.style.color = "red";
+      //
+      let mudandoCor = document.getElementsByClassName("mesmo-para");
+      mudandoCor[0].style.backgroundColor = "blue";
+      //ALTERADO O ESTILO NO PRIMEIRO DELES!
+
+      let sub = document.getElementsByTagName("h4")[0]; //preciso dizer a posição 
+      sub.style.backgroundColor = "green"
+
+
+       
+     
+
+    </script>
+  </body>
+</html>
