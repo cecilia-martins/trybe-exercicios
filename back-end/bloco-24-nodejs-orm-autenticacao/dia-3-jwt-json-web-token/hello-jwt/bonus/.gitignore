@@ -1,0 +1,12 @@
+node_modules/
+coverage
+package-lock.json
+.env
+controllers/
+middlewares/validations.js
+models 
+routes
+services
+package.json
+index.js 
+db.sql
