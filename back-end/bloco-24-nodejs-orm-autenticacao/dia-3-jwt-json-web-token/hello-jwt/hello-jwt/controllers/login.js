@@ -23,10 +23,20 @@ const validateBody = (body) =>
   }).validate(body);
 
 router.post('/', (req, res, next) => {
-  const PAYLOAD = { username: req.body.username, admin: false };
+  const admin = req.body.username === 'admin' && req.body.password === 's3nh4S3gur4???';
+  const PAYLOAD = { username: req.body.username, admin };
   const { error } = validateBody(req.body);
-
+  // console.log(admin);
   if (error) return next(error);
+
+  if (req.body.username === 'admin' && req.body.password !== 's3nh4S3gur4???') {
+    /* Criamos um novo objeto de erro */
+    const err = new Error('Invalid username or password');
+    /* Adicionamos o status `401 Unauthorized` ao erro */
+    err.statusCode = 401;
+    /* Passmos o erro para o express, para que seja tratado pelo middleware de erro */
+    return next(err);
+  }
 
   const token = jwt.sign(PAYLOAD, SECRET, CONFIG);
   
