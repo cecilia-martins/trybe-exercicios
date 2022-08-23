@@ -3,7 +3,7 @@ coverage
 package-lock.json
 .env
 controllers/
-middlewares/validations.json
+middlewares/validations.js
 models 
 routes
 services
