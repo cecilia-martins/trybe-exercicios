@@ -1,9 +1,11 @@
 const router = require('express').Router();
-const jwt = require('jsonwebtoken');
+// const jwt = require('jsonwebtoken');
 const Joi = require('joi');
 
-const SECRET = process.env.JWT_SECRET;
-const CONFIG = { algorithm: 'HS256', expiresIn: '1d' };
+const { createToken } = require('../helpers/token');
+
+// const SECRET = process.env.JWT_SECRET;
+// const CONFIG = { algorithm: 'HS256', expiresIn: '1d' };
 // const PAYLOAD = { username: req.body.username, admin: false };
 // const regexStr = '^(?=.*[a-zA-Z])(?=.*[0-9])[A-Za-z0-9]+$'; // https://acervolima.com/como-verificar-se-a-string-e-alfanumerica-ou-nao-usa-expressao-regular/#:~:text=Uma%20string%20alfanum%C3%A9rica%20%C3%A9%20uma,alguns%20n%C3%BAmeros%20de%200%2D9.&text=Explica%C3%A7%C3%A3o%3A,Portanto%2C%20%C3%A9%20uma%20string%20alfanum%C3%A9rica.
 
@@ -38,7 +40,7 @@ router.post('/', (req, res, next) => {
     return next(err);
   }
 
-  const token = jwt.sign(PAYLOAD, SECRET, CONFIG);
+  const token = createToken(PAYLOAD);
   
   return res.status(200).json({ token });
 });
