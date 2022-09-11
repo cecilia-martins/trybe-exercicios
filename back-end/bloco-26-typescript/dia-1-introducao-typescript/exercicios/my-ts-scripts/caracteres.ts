@@ -1,8 +1,8 @@
 type Character = {
   nickname: string,
   class: string,
-  stats: { agi: 50, str: 100, int: 25, hp: 1000, mp: 300 },
-  createdAt: new Date('2003-10-1')
+  stats: { agi: number, str: number, int: number, hp: number, mp: number }, // do gabarito.. depois entendi 
+  createdAt: Date;
 }
 
 const characters: any = [
