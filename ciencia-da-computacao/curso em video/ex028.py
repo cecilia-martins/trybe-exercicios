@@ -1,6 +1,6 @@
 from random import randint
 
-aleatorio = randint(0, 5)
+aleatorio = randint(0, 5)  # gera um número "aleatorio" entre 0 e 5
 
 numero = int(input('Digite um número entre 0 e 5: '))
 
