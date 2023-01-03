@@ -1,7 +1,9 @@
-nome = input('Digite seu nome completo: ')
+nome = str(input('Digite seu nome completo: ')).strip()
 maiusculo = nome.upper()
 minusculo = nome.lower()
-ao_todo = len(nome)
+
+# retirando os espaços para não interferir na contagem
+ao_todo = len(nome) - nome.count(' ')
 primeiro = nome.split()[0]
 
 print(f'''
