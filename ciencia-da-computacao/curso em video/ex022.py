@@ -9,7 +9,7 @@ print(frase[9::3])  # do 9 ate o final pulando de 3 em 3
 
 len(frase)  # comprimento da frase
 
-print(frase.count('o'))  # conta quantas vezes aparce o 'o' na frase
+print(frase.count('o'))  # conta quantas vezes aparece o 'o' na frase
 
 
 
