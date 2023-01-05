@@ -1,1 +1,1 @@
-
+    # print(cada, end=' ')
